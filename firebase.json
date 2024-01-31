@@ -1,0 +1,11 @@
+{
+  "hosting": [
+    {
+      "target": "and-blog",
+      "source": ".",
+      "frameworksBackend": {
+        "region": "us-central1"
+      }
+    }
+  ]
+}

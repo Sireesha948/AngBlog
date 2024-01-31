@@ -1,0 +1,39 @@
+<div class="card shadow-effect d-flex flex-row justify-content-center">
+    <div class="card-body">
+        <div class="text-center mt-3 mb-5">
+            <h3>SUBSCRIPTION FORM</h3>
+            <P class="m-auto subs-text mb-3">lorer is the very beautiful country in the world it have lot of trees and beautiful people in the world</P>
+           
+            <form action="" class="form-inline mb-5" #subForm = ngForm  (ngSubmit)="onSubmit(subForm.value)">
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="form-group col-md-5">
+                        <input type="text" class="form-control shadow-effect w-50" placeholder="Your Name" name = "name"  #Name = "ngModel"     ngModel required  [ngClass]="{'is-invalid':Name.touched && Name.invalid}">
+                        <div class="text-danger" *ngIf = 'Name.touched && Name.invalid'>
+
+                            <div *ngIf = "Name.errors?.['required']">Name is required</div>
+
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-5">
+                        <input type="email" class="form-control shadow-effect w-50" placeholder="Email Address" name="email"   #Email = "ngModel" ngModel required email [ngClass]="{'is-invalid':Email.touched && Email.invalid}">
+                        <div class="text-danger" *ngIf = 'Email.touched && Email.invalid'>
+
+                            <div *ngIf = "Email.errors?.['required']">Email is required</div>
+                            <div *ngIf = "Email.errors?.['required']">Please Enter a Valid Email Address</div>
+                        </div>
+                    </div>
+                     <div class="col-md-2">
+                        <button class="btn btn-info btn-block btn-theme" [disabled] = 'subForm.invalid'>SUBSCRIBE</button>
+                     </div>
+    
+                </div>
+
+                
+
+            </form>
+        
+        </div>
+    </div>
+</div>

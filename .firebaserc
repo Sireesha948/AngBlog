@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ang-blog-55ed0": {
+      "hosting": {
+        "and-blog": [
+          "ang-blog-55ed0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ang-blog-55ed0"
+  }
+}
